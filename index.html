@@ -2,72 +2,296 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>U.S. Embassy in Kenya — Work & Live in the United States (Official Invitation)</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --accent:#b22234; /* US flag red */
-      --accent-dark:#3c3b6e; /* US flag blue */
+    :root {
+      --accent:#b22234;       /* US flag red */
+      --accent-dark:#3c3b6e;  /* US flag blue */
       --muted:#4b5563;
       --bg:#f9fafb;
       --card:#ffffff;
       --shadow:0 8px 30px rgba(0,0,0,0.08);
-      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+      font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#f0f4ff 0%,var(--bg) 100%);color:#111827}
-    .poster{max-width:1000px;margin:36px auto;padding:28px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 420px;gap:28px}
-    @media (max-width:880px){.poster{grid-template-columns:1fr;max-width:720px;padding:20px}}
-    header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-    header h2{font-size:20px;margin:0;font-weight:800;color:var(--accent-dark)}
-    header small{color:var(--muted)}
-    .hero{display:flex;flex-direction:column;gap:18px}
-    .kicker{display:inline-block;padding:6px 12px;background:linear-gradient(90deg,var(--accent-dark) 0%, var(--accent) 100%);color:white;border-radius:999px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
-    h1{margin:0;font-size:34px;line-height:1.1;color:var(--accent-dark)}
-    @media (max-width:520px){h1{font-size:26px}}
-    p.lead{margin:0;color:var(--muted);font-size:16px}
-    .badges{display:flex;gap:8px;flex-wrap:wrap}
-    .badge{background:#eef2ff;padding:8px 12px;border-radius:10px;font-weight:600;font-size:14px;color:var(--accent-dark)}
-    .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
-    @media (max-width:520px){.roles{grid-template-columns:1fr}}
-    .role{background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef3ff;padding:10px;border-radius:10px}
-    .role h4{margin:0;font-size:15px;color:var(--accent-dark)}
-    .role small{color:var(--muted)}
-    .cta-row{display:flex;gap:12px;align-items:center;margin-top:18px}
-    .btn-primary{background:var(--accent-dark);color:white;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-    .btn-secondary{background:transparent;border:2px solid var(--accent-dark);color:var(--accent-dark);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
-    .note{font-size:13px;color:var(--muted);margin-top:8px}
-    .panel{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:18px;border-radius:12px;border:1px solid #eef3ff}
-    .panel h3{margin:0 0 6px 0;color:var(--accent-dark)}
-    .package{display:flex;flex-direction:column;gap:6px;margin-top:10px}
-    .pkg{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;border:1px dashed #eef3ff}
-    .pkg strong{font-size:15px}
-    .deadline{margin-top:12px;padding:10px;border-radius:8px;background:#fff7ed;border-left:4px solid #f59e0b;color:#92400e}
-    .footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:13px}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo .icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--accent-dark),var(--accent));display:grid;place-items:center;color:white;font-weight:800}
-    @media print{body{background:white} .poster{box-shadow:none;border:none}}
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f0f4ff 0%, var(--bg) 100%);
+      color: #111827;
+      font-family: var(--font-family);
+    }
+
+    .poster {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 28px;
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+    }
+
+    /* Tablet and below */
+    @media (max-width: 880px) {
+      .poster {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+        padding: 20px;
+      }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    header h2 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: 800;
+      color: var(--accent-dark);
+    }
+
+    header small {
+      color: var(--muted);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .kicker {
+      display: inline-block;
+      padding: 6px 12px;
+      background: linear-gradient(90deg, var(--accent-dark) 0%, var(--accent) 100%);
+      color: white;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      color: var(--accent-dark);
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 1.6rem; }
+    }
+
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #eef2ff;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--accent-dark);
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .role {
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      border: 1px solid #eef3ff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .role h4 {
+      margin: 0;
+      font-size: 15px;
+      color: var(--accent-dark);
+    }
+
+    .role small { color: var(--muted); }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .btn-primary {
+      background: var(--accent-dark);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--accent-dark);
+      color: var(--accent-dark);
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #eef3ff;
+    }
+
+    .panel h3 {
+      margin: 0 0 6px 0;
+      color: var(--accent-dark);
+    }
+
+    .package {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .pkg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px dashed #eef3ff;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pkg strong { font-size: 15px; }
+
+    .deadline {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      color: #92400e;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      gap: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, var(--accent-dark), var(--accent));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+    }
+
+    @media print {
+      body { background: white; }
+      .poster { box-shadow: none; border: none; }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
+
 <body>
   <article class="poster" role="region" aria-labelledby="posterTitle">
     <section class="hero">
       <header>
-        <img src="Embassy logo.png" alt="Embassy logo" style="height: 80px;width= 80px;>
+        <!-- Replace the image URL with an online link or local relative path -->
+        <img src="Embassy logo.png" alt="Embassy logo" style="height: 60px;width:60px;">
         <div>
           <h2>Embassy of the United States of America</h2>
           <small>Nairobi, Kenya</small>
         </div>
       </header>
+
       <span class="kicker">Official Application</span>
       <h1 id="posterTitle">Work &amp; Live in the United States — 2025 Professional Visa Program</h1>
-      <p class="lead">The <strong>Embassy of the United States in Kenya</strong> invites skilled and semi-skilled Kenyan citizens to apply for the 2025 <strong>U.S. Work &amp; Career Migration Program</strong>. Successful applicants will be connected to verified American employers and guided through sponsored work visa processes (H-1B, EB-3).</p>
+
+      <p class="lead">
+        The <strong>Embassy of the United States in Kenya</strong> invites skilled and semi-skilled Kenyan citizens 
+        to apply for the 2025 <strong>U.S. Work &amp; Career Migration Program</strong>. 
+        Successful applicants will be connected to verified American employers and guided through sponsored work visa 
+        processes (H-1B, EB-3).
+      </p>
+
       <div class="badges" aria-hidden="true">
         <span class="badge">Official Visa Sponsorship</span>
         <span class="badge">Career Placement in the U.S.</span>
         <span class="badge">Relocation Assistance</span>
       </div>
+
       <div style="margin-top:8px">
         <h3 style="margin:0 0 8px 0">Seeking Professionals In</h3>
         <div class="roles">
@@ -77,12 +301,15 @@
           <div class="role"><h4>Business &amp; Finance</h4><small>Analysts, Consultants</small></div>
         </div>
       </div>
+
       <div class="cta-row">
-        <a class="btn-primary" href="mailto:USAembassykenya@gmail.com?subject=Application%20for%20U.S.%20Work%20Visa%20Program">Apply Now &nbsp;→</a>
+        <a class="btn-primary" href="mailto:USAembassykenya@gmail.com?subject=Application%20for%20U.S.%20Work%20Visa%20Program">Apply Now →</a>
         <a class="btn-secondary" href="#programDetails">Program Details</a>
       </div>
-      <p class="note">Deadline to apply: <strong>October 6, 2025</strong>. Applicants will be notified via email. All processing is conducted under U.S. immigration and labor regulations.</p>
+
+      <p class="note">Deadline to apply: <strong>October 6, 2025</strong>. Applicants will be notified via email.</p>
     </section>
+
     <aside class="panel" id="programDetails" aria-labelledby="panelTitle">
       <div class="logo">
         <div>
@@ -90,16 +317,20 @@
           <div style="font-size:13px;color:var(--muted)">Official Communication — Nairobi, Kenya</div>
         </div>
       </div>
+
       <h3 id="panelTitle" style="margin-top:14px">Program Benefits</h3>
+
       <div class="package">
         <div class="pkg"><div><strong>Visa Sponsorship</strong><div style="font-size:13px;color:var(--muted)">H-1B &amp; EB-3 support</div></div><div><strong>Provided</strong></div></div>
         <div class="pkg"><div><strong>Relocation Support</strong><div style="font-size:13px;color:var(--muted)">Flights &amp; Initial Housing</div></div><div><strong>Included</strong></div></div>
         <div class="pkg"><div><strong>Pre-Departure Orientation</strong><div style="font-size:13px;color:var(--muted)">Held in Nairobi</div></div><div><strong>Mandatory</strong></div></div>
         <div class="pkg"><div><strong>Job Placement</strong><div style="font-size:13px;color:var(--muted)">U.S. verified employers</div></div><div><strong>Guaranteed</strong></div></div>
       </div>
+
       <div class="deadline">
         <strong>Apply by</strong> October 6, 2025 — Early applicants prioritized.
       </div>
+
       <div style="margin-top:12px;font-size:14px">
         <div><strong>How to Apply</strong></div>
         <ol style="margin:8px 0 0 18px;color:var(--muted)">
@@ -108,6 +339,7 @@
           <li>Visa documentation and relocation procedures will be handled through approved embassy channels.</li>
         </ol>
       </div>
+
       <div class="footer">
         <div>Questions? <a href="mailto:USAembassykenya@gmail.com">USAembassykenya@gmail.com</a></div>
         <div style="text-align:right">© 2025 Embassy of the United States — Nairobi, Kenya</div>
@@ -115,6 +347,4 @@
     </aside>
   </article>
 </body>
-
 </html>
-
